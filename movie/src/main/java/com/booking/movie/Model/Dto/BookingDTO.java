@@ -1,7 +1,9 @@
 package com.booking.movie.Model.Dto;
 
-import java.time.LocalDateTime;
+import lombok.Data;
 
+import java.time.LocalDateTime;
+@Data
 public class BookingDTO {
     private int id;
     private String seat_number;

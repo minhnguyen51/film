@@ -1,39 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Employee</title>
+    <meta charset="UTF-8">
+    <title>Trang Chủ - Đặt Vé Xem Phim</title>
     <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+
+    </style>
 </head>
 <body>
-<div class="container my-2" align="center">
 
-    <h3>Employee List</h3>
-    <a th:href="@{/book}" class="btn btn-primary btn-sm mb-3" >Booking</a>
-    <table style="width:80%" border="1"
-           class = "table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="employee:${allemplist}">
-            <td th:text="${employee.name}"></td>
-            <td th:text="${employee.email}"></td>
-            <td> <a th:href="@{/showFormForUpdate/{id}(id=${})}"
-                    class="btn btn-primary">??t v�</a>
-                <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}"
-                   class="btn btn-danger">Delete</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">🎬 MOVIE BOOKING</a>
+    <div class="ml-auto d-flex align-items-center">
+        <a class="btn btn-warning btn-sm mr-3" href="Booking.html">🎟 Đặt vé</a>
+        <a class="btn btn-outline-light btn-sm" href="#">Đăng nhập</a>
+        <a class="btn btn-outline-light btn-sm ml-2" href="#">Đăng ký</a>
+    </div>
+</nav>
+
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Phim Đang Chiếu</h2>
+    <div class="row">
+
+        <!-- Movie Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card movie-card">
+                <img src="https://byvn.net/zKTX" class="card-img-top movie-poster" alt="Poster">
+                <div class="card-body">
+                    <h5 class="card-title">Người Nhện 5</h5>
+                    <p class="card-text text-muted">Thể loại: Hành động | Khởi chiếu: 2025-07-01</p>
+                    <div class="btn-pair">
+                        <a href="Booking.html?id=1" class="btn btn-primary btn-sm">🎟 Đặt vé</a>
+                        <a href="DetailMovie.html?id=1" class="btn btn-outline-secondary btn-sm">📄 Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card movie-card">
+                <img src="https://byvn.net/Ucmk" class="card-img-top movie-poster" alt="Poster">
+                <div class="card-body">
+                    <h5 class="card-title">Avengers: Tái Hợp</h5>
+                    <p class="card-text text-muted">Thể loại: Viễn tưởng | Khởi chiếu: 2025-07-10</p>
+                    <div class="btn-pair">
+                        <a href="Booking.html?id=2" class="btn btn-primary btn-sm">🎟 Đặt vé</a>
+                        <a href="DetailMovie.html?id=2" class="btn btn-outline-secondary btn-sm">📄 Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card movie-card">
+                <img src="https://byvn.net/mOMF" class="card-img-top movie-poster" alt="Poster">
+                <div class="card-body">
+                    <h5 class="card-title">Fast & Furious 12</h5>
+                    <p class="card-text text-muted">Thể loại: Hành động - Đua xe | Khởi chiếu: 2025-07-15</p>
+                    <div class="btn-pair">
+                        <a href="booking.html?id=3" class="btn btn-primary btn-sm">🎟 Đặt vé</a>
+                        <a href="detail.html?id=3" class="btn btn-outline-secondary btn-sm">📄 Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+<!-- Footer -->
+<footer class="text-center text-muted mt-5 mb-3">
+            2025 Movie Booking
+</footer>
+
 </body>
 </html>

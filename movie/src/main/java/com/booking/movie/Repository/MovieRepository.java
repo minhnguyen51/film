@@ -19,7 +19,7 @@ public interface MovieRepository extends JpaRepository<MovieEntity, Integer> {
     List<MovieEntity> findByReleaseDate(LocalDate releaseDate);
     // Tìm phim theo khoảng thời gian phát hành
     List<MovieEntity> findByReleaseDateBetween(LocalDate startDate, LocalDate endDate);
-    // viết sql tự do như này
+
 
 //    @Query(value = "SELECT SUM(actual_m_ut_checklist_number) FROM actual_detail_requirement "
 //            + "WHERE actual_header_id = :actualHeaderId", nativeQuery = true)
